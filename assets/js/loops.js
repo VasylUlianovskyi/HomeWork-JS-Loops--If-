@@ -18,17 +18,25 @@ while (currentNumber >= TOTAL_NUMBER) {
 let count = 25;
 const FINAL_COUNT = 0;
 
+document.write("<p> ");
+
 do {
-  document.write(`<p><span>${count--}</span></p>`);
+  document.write(`<span>${count--},</span>`);
   console.log(count);
 } while (count >= FINAL_COUNT);
+
+document.write(" </p>");
 
 // for
 
 let stopCount = 0;
+
+document.write("<p> ");
 for (let startCount = 25; startCount >= stopCount; startCount--) {
-  document.write(`<p>#${startCount}</p>`);
+  document.write(`<span>#${startCount} </span>`);
 }
+
+document.write(" </p>");
 
 // 2. ВИВЕСТИ ЧИСЛА ВІД 10 ДО 50, ЯКІ КРАТНІ 5.
 
@@ -48,16 +56,24 @@ while (number <= TOTAL_COUNT) {
 
 let value = 10;
 
+document.write("<p> ");
+
 do {
-  document.write(`<p>${value}, </p>`);
+  document.write(`<span>${value}; </span>`);
   value += 5;
 } while (value <= 50);
 
+document.write(" </p>");
+
 // for
 
+document.write("<p> ");
+
 for (let i = 10; i <= 50; i += 5) {
-  document.write(`<p>#${i}</p>`);
+  document.write(`<span>#${i} </span>`);
 }
+
+document.write(" </p>");
 
 // 3. *Знайти суму чисел в межах від 1 до 100.
 // while
@@ -73,7 +89,7 @@ while (firstNumber <= LAST_NUMBER) {
   sum += firstNumber;
   firstNumber++;
 }
-document.write("Сума чисел в межах від 1 до 100 = ", sum);
+document.write(`<p>Сума чисел в межах від 1 до 100 = ${sum}</p>`);
 
 // do... while;
 
@@ -84,7 +100,7 @@ do {
   mult += a;
   a++;
 } while (a <= 100);
-document.write(" Сума чисел в межах від 1 до 100 = ", mult);
+document.write(`<p>Сума чисел в межах від 1 до 100 = ${mult}</p>`);
 
 // for
 
@@ -94,4 +110,4 @@ let sumValue = 0;
 for (let b = 1; b <= finalNumber; b++) {
   sumValue += b;
 }
-document.write(" Сума чисел в межах від 1 до 100 = ", sumValue);
+document.write(`<p>Сума чисел в межах від 1 до 100 = ${sumValue}</p>`);
