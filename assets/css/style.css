@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
+  padding: 20px;
   background: linear-gradient(#f5acac, #c879e7);
   border-radius: 10px;
 }
