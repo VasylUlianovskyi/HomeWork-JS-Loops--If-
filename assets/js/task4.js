@@ -5,26 +5,32 @@
 //                 або фото і ім'я користувача (якщо користувач залогінився)
 // *додатково застилізувати фото користувача: за значанням isMale для чоловіка зробити синю рамку, для жінки червону, при незаданому значенні isMale - сіру.
 
-const isLogin = true;
-const isMale =
+const isLogin = false;
+const isMale = false ? "blue" : "grey";
 
 if (isLogin) {
   document.write(`
   <header>
-  <div class="logo">LOGO</div>
-  <div class="user-info">
-    <p>Joe Dou</p>
-    <img src="" alt="">
-  </div>
-</header>
+    <div class="logo-wrapper">
+      <a href="#home"><img src="./assets/images/icons8-freebsd-50.png" alt=""></a>
+    </div>
+    <div class="user-info">
+      <p class = "user-name">User Name</p>
+      <div  style = "border:5px solid ${isMale}; border-radius:50px">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </header>
   `);
 } else {
   document.write(`
   <header>
-  <div class="logo">LOGO</div>
+  <div class="logo-wrapper">
+  <a href="#home"><img src="./assets/images/icons8-freebsd-50.png" alt=""></a>
+  </div>
   <div class="btn-wrap">
-    <button>Login</button>
-    <button>Register</button>
+    <button class=btn>Login</button>
+    <button class=btn>Register</button>
   </div>
 </header>
 `);

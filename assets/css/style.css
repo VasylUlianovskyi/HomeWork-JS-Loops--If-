@@ -1,7 +1,49 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background: linear-gradient(#f5acac, #c879e7);
   border-radius: 10px;
+}
+
+
+.btn-wrap {
+  width: 15%;
+
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 15px;
+  max-width: 100px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: antiquewhite;
+}
+
+.btn:hover {
+  background-color: rgb(241, 212, 173);
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  m
+}
+
+.user-name {
+  padding-right: 10px;
+  font-size: 25px;
+  margin: 0;
+}
+
+.fa-user {
+  padding: 15px;
+  font-size: 25px;
 }
