@@ -5,8 +5,17 @@
 //                 або фото і ім'я користувача (якщо користувач залогінився)
 // *додатково застилізувати фото користувача: за значанням isMale для чоловіка зробити синю рамку, для жінки червону, при незаданому значенні isMale - сіру.
 
-const isLogin = false;
-const isMale = false ? "blue" : "grey";
+const isLogin = true;
+const isMale = true;
+
+let borderColor;
+if (isMale === null) {
+  borderColor = "grey";
+} else if (isMale) {
+  borderColor = "blue";
+} else {
+  borderColor = "red";
+}
 
 if (isLogin) {
   document.write(`
@@ -16,7 +25,7 @@ if (isLogin) {
     </div>
     <div class="user-info">
       <p class = "user-name">User Name</p>
-      <div  style = "border:5px solid ${isMale}; border-radius:50px">
+      <div  style = "border:5px solid ${borderColor}; border-radius:50px">
         <i class="fa-solid fa-user"></i>
       </div>
     </div>
