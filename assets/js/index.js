@@ -41,12 +41,12 @@ sum = 0;
 
 if (price > FIRST_DISCOUNT_VALUE && price <= SECOND_DISCOUNT_VALUE) {
   sum = price - price * firstDiscount;
-  document.write("Total Price: ", sum);
+  document.write(`<h2>Total Price: ${sum}</h2>`);
 } else if (price > SECOND_DISCOUNT_VALUE) {
   sum = price - price * secondDiscount;
-  document.write("Total Price: ", sum);
-  // } else if (price = NaN) {
-  //   document.write(`<p style = color:red>INVAVID VALUE</p>`);
+  document.write(`<h2>Total Price: ${sum}</h2>`);
+} else if (isNaN(price)) {
+  document.write("<h2 style = color:red>INVAVID VALUE</h2>");
 } else {
-  document.write("Total Price: ", price);
+  document.write(`<h2>Total Price: ${price}</h2>`);
 }
