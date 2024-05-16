@@ -9,8 +9,7 @@ header {
 
 
 .btn-wrap {
-  width: 15%;
-
+  display: flex;
 }
 
 .btn {

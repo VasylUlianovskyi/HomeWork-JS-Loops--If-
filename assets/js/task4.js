@@ -5,8 +5,9 @@
 //                 або фото і ім'я користувача (якщо користувач залогінився)
 // *додатково застилізувати фото користувача: за значанням isMale для чоловіка зробити синю рамку, для жінки червону, при незаданому значенні isMale - сіру.
 
-const isLogin = true;
-const isMale = true;
+const isLogin = false;
+const isMale = null;
+console.log(isMale);
 
 let borderColor;
 if (isMale === null) {
@@ -17,30 +18,24 @@ if (isMale === null) {
   borderColor = "red";
 }
 
-if (isLogin) {
-  document.write(`
-  <header>
-    <div class="logo-wrapper">
-      <a href="#home"><img src="./assets/images/icons8-freebsd-50.png" alt=""></a>
-    </div>
+const authBlock = isLogin
+  ? `
     <div class="user-info">
       <p class = "user-name">User Name</p>
       <div  style = "border:5px solid ${borderColor}; border-radius:50px">
         <i class="fa-solid fa-user"></i>
       </div>
-    </div>
-  </header>
-  `);
-} else {
-  document.write(`
-  <header>
-  <div class="logo-wrapper">
-  <a href="#home"><img src="./assets/images/icons8-freebsd-50.png" alt=""></a>
-  </div>
+    </div>`
+  : `
   <div class="btn-wrap">
     <button class=btn>Login</button>
     <button class=btn>Register</button>
-  </div>
-</header>
-`);
-}
+  </div>`;
+
+document.write(`
+  <header>
+    <div class="logo-wrapper">
+      <a href="#home"><img src="./assets/images/icons8-freebsd-50.png" alt=""></a>
+    </div>
+    ${authBlock}
+  </header>`);
