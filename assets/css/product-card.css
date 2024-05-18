@@ -1,0 +1,35 @@
+body {
+  background-color: #ffffff;
+}
+
+.product-card {
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, .12, .18);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fffefe;
+  align-content: space-between;
+  text-align: center;
+}
+
+.product-img {
+  height: 200px;
+  margin: 12px 12px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center
+}
+
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 8px
+}
+
+.product-description {
+  font-size: 1rem
+}
+
+.price {
+  text-decoration: line-through;
+}
