@@ -3,6 +3,7 @@ body {
 }
 
 .product-card {
+  margin: 40px;
   max-width: 400px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, .12, .18);
@@ -32,4 +33,28 @@ body {
 
 .price {
   text-decoration: line-through;
+  color: red;
+}
+
+.discount-price {
+  color: green;
+  font-weight: bold;
+}
+
+.discount {
+  color: rgb(68, 100, 19);
+}
+
+.btn-cart {
+  margin-bottom: 10px;
+  background: none;
+  border: none;
+  background-color: rgb(190, 220, 247);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.btn-cart:hover {
+  background-color: rgb(134, 197, 252);
 }
