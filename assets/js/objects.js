@@ -98,16 +98,16 @@ Book.prototype.getBookYears = function () {
   return new Date().getFullYear() - this.bookYear;
 };
 
-Book.prototype.cahngePrice = function (newBookPrice) {
-  return (newBookPrice = this.price);
+Book.prototype.changePrice = function (newBookPrice) {
+  this.bookPrice = newBookPrice;
 };
 
 const book = new Book("Стівен Кінг", "Острів Дума", 2004, "КСД", "Харків", 430);
 
-console.log(book);
-
-book.newBookPrice = "500";
+book.changePrice(300);
 book.getBookYears(2004);
+
+console.log(book);
 console.log("Книзі", book.getBookYears(), "років");
 
 const book2 = new Book(
@@ -119,8 +119,9 @@ const book2 = new Book(
   300
 );
 
+book2.changePrice(200);
+book.getBookYears(2022);
+
 console.log(book2);
 
-book.newBookPrice = "400";
-book.getBookYears(2022);
 console.log("Книзі", book2.getBookYears(), "років");
